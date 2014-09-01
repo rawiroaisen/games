@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+    <h1><%= category.name %></h1>
+    <div><%= games.length %> Games</div>
+    <% games.forEach(function(game){ %>
+    <a href="/games/<%= game.slug %>">
+    <div>    
+        <p><%= game.name %></p>
+        <img src="<%= game.thumb_url %>" alt="<%= game.name %>">
+    </div>
+    </a>
+    <% }) %>
+</body>
+</html>
